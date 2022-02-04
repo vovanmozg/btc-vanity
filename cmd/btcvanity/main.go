@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/MarinX/btc-vanity"
+	"github.com/vovanmozg/btc-vanity"
 )
 
 var buffer = flag.Int("threads", 16, "How many threads you want to spawn")
@@ -13,6 +13,7 @@ var testnet = flag.Bool("testnet", false, "Use testnet")
 var usage = func() {
 	fmt.Fprintf(os.Stderr, "Usage: %s [OPTIONS] pattern\n", os.Args[0])
 	fmt.Fprintf(os.Stderr, "Example: %s Kid\n", os.Args[0])
+	fmt.Fprintf(os.Stderr, "Pattern examples: \"Kid\", \"(?i)kid\", \"[a-zA-Z]{33}\"\n", os.Args[0])
 	flag.PrintDefaults()
 	os.Exit(1)
 }
